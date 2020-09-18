@@ -15,6 +15,8 @@ repositories:
   url: https://storage.googleapis.com/jenkinsxio/charts
 - name: stable
   url: https://kubernetes-charts.storage.googleapis.com
+- name: cdf
+  url: https://cdfoundation.github.io/tekton-helm-chart
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
   version: 0.0.296
@@ -43,14 +45,12 @@ releases:
   namespace: nginx
   values:
   - versionStream/charts/stable/nginx-ingress/values.yaml.gotmpl
-- chart: jenkins-x/tekton
-  version: 0.0.63
+- chart: cdf/tekton-pipeline
+  version: 0.0.2
   name: tekton
   namespace: jx
-  values:
-  - versionStream/charts/jenkins-x/tekton/values.yaml.gotmpl
 - chart: jenkins-x/lighthouse
-  version: 0.0.683
+  version: 0.0.826
   name: lighthouse
   namespace: jx
   values:
