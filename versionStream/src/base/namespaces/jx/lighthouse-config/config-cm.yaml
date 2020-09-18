@@ -9,9 +9,16 @@ data:
               required_status_checks:
                 contexts:
                 - promotion-build
+            nodey510:
+              required_status_checks:
+                contexts:
+                - pr-build
       protect-tested-repos: true
     github:
       LinkURL: null
+    in_repo_config:
+      enabled:
+        '*': true
     plank: {}
     pod_namespace: jx
     postsubmits:
@@ -21,6 +28,12 @@ data:
         - master
         name: promotion
         skip_report: true
+      jstrachan/nodey510:
+      - agent: tekton
+        branches:
+        - master
+        name: release
+        skip_report: true
     presubmits:
       jstrachan/jx3-demo-catalog-dev:
       - agent: tekton
@@ -29,16 +42,24 @@ data:
         name: promotion-build
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
+      jstrachan/nodey510:
+      - agent: tekton
+        always_run: true
+        context: pr-build
+        name: pr-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
     prowjob_namespace: jx
     push_gateway:
       serve_metrics: false
     tide:
       context_options:
         from-branch-protection: true
-        required-if-present-contexts: []
+        required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
         jstrachan/jx3-demo-catalog-dev: merge
+        jstrachan/nodey510: merge
       queries:
       - labels:
         - approved
@@ -50,6 +71,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey510
       - labels:
         - updatebot
         missingLabels:
@@ -60,6 +82,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey510
       target_url: http://deck-jx.34.71.101.110.nip.io
 kind: ConfigMap
 metadata:
