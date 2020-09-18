@@ -24,12 +24,6 @@ data:
         - master
         name: promotion
         skip_report: true
-      jstrachan/nodey510:
-      - agent: tekton
-        branches:
-        - master
-        name: release
-        skip_report: true
     presubmits:
       jstrachan/jx3-demo-catalog-dev:
       - agent: tekton
@@ -44,7 +38,7 @@ data:
     tide:
       context_options:
         from-branch-protection: true
-        required-if-present-contexts: []
+        required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
         jstrachan/jx3-demo-catalog-dev: merge
