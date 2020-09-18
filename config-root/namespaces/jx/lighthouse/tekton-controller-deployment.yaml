@@ -1,0 +1,54 @@
+# Source: lighthouse/templates/tekton-controller-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lighthouse-tekton-controller
+  labels:
+    draft: draft-app
+    chart: "lighthouse-0.0.826"
+    app: lighthouse-tekton-controller
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+    jenkins-x.io/hash: '64ba2c770f2f03c3e005866a3e882f006ae4dba25d21c59c5b0966fb2110fa5f'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      draft: draft-app
+      app: lighthouse-tekton-controller
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: lighthouse-tekton-controller
+      annotations: {}
+    spec:
+      serviceAccountName: lighthouse-tekton-controller
+      containers:
+        - name: lighthouse-tekton-controller
+          image: gcr.io/jenkinsxio/lighthouse-tekton-controller:0.0.0-SNAPSHOT-PR-1071-3
+          imagePullPolicy: IfNotPresent
+          args:
+            - --namespace=jx
+            - --dashboard-url=
+          ports:
+            - name: metrics
+              containerPort: 8080
+          env:
+            - name: "LOGRUS_FORMAT"
+              value: "json"
+            - name: JX_DEFAULT_IMAGE
+              value: "gcr.io/jenkinsxio/builder-maven:2.1.142-761"
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 80m
+              memory: 128Mi
+      terminationGracePeriodSeconds: 180
+      nodeSelector: {}
+      affinity: {}
+      tolerations: []
