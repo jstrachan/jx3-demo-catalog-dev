@@ -48,7 +48,7 @@ releases:
 - chart: cdf/tekton-pipeline
   version: 0.0.2
   name: tekton
-  namespace: jx
+  namespace: tekton-pipelines
 - chart: jenkins-x/lighthouse
   version: 0.0.826
   name: lighthouse
