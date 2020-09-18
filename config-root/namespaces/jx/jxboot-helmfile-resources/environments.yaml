@@ -41,7 +41,7 @@ spec:
     versionStreamRef: "master"
     useGitOps: true
     storageLocations:
-      - bucketUrl: gs://logs-jstrachan-catalog-603ac27e92d4
+      - bucketUrl: gs://logs-jstrachan-catalog2-fbe7043249e4
         classifier: logs
-      - bucketUrl: gs://reports-jstrachan-catalog-603ac27e92d4
+      - bucketUrl: gs://reports-jstrachan-catalog2-fbe7043249e4
         classifier: reports

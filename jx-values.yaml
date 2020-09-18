@@ -8,7 +8,7 @@ jxRequirements:
       gitRef: master
       gitURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
   cluster:
-    clusterName: jstrachan-catalog
+    clusterName: jstrachan-catalog2
     environmentGitOwner: todo
     gitKind: github
     gitName: github
@@ -70,13 +70,13 @@ jxRequirements:
       url: ""
     logs:
       enabled: true
-      url: gs://logs-jstrachan-catalog-603ac27e92d4
+      url: gs://logs-jstrachan-catalog2-fbe7043249e4
     reports:
       enabled: true
-      url: gs://reports-jstrachan-catalog-603ac27e92d4
+      url: gs://reports-jstrachan-catalog2-fbe7043249e4
     repository:
       enabled: true
-      url: gs://repository-jstrachan-catalog-603ac27e92d4
+      url: gs://repository-jstrachan-catalog2-fbe7043249e4
   vault: {}
   velero:
     schedule: ""
