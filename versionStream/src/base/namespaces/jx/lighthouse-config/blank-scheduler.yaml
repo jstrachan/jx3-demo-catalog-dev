@@ -40,8 +40,10 @@ spec:
       - override
   policy:
     protectTested: true
-  postsubmits: []
-  presubmits: []
+  postsubmits:
+    entries: []
+  presubmits:
+    entries: []
   schedulerAgent:
     agent: tekton
   trigger:
