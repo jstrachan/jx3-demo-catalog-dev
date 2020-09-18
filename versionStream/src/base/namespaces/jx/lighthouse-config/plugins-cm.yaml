@@ -39,8 +39,6 @@ data:
       - heart
       - cat
       - override
-      - dog
-      - pony
       jstrachan/nodey510:
       - config-updater
       - approve
@@ -56,8 +54,6 @@ data:
       - heart
       - cat
       - override
-      - dog
-      - pony
     requiresig: {}
     sigmention: {}
     size:
