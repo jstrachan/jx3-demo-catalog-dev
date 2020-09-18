@@ -1,0 +1,7 @@
+metadata:
+  creationTimestamp: null
+spec:
+  groups:
+  - owner: jstrachan
+    repositories:
+    - name: nodey510
