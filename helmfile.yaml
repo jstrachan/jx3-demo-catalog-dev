@@ -19,11 +19,12 @@ repositories:
   url: https://cdfoundation.github.io/tekton-helm-chart
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
-  version: 0.0.296
+  version: 0.0.302
   name: jxboot-helmfile-resources
   namespace: jx
   values:
   - versionStream/charts/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
+  - charts/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
 - chart: external-secrets/kubernetes-external-secrets
   version: 5.2.0
   name: kubernetes-external-secrets
