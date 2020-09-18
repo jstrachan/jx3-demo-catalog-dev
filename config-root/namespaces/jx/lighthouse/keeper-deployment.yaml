@@ -5,7 +5,7 @@ metadata:
   name: lighthouse-keeper
   labels:
     draft: draft-app
-    chart: "lighthouse-0.0.683"
+    chart: "lighthouse-0.0.826"
     app: lighthouse-keeper
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
@@ -26,7 +26,7 @@ spec:
   template:
     metadata:
       annotations:
-        ad.datadoghq.com/keeper.logs: '[{"source":"prow","service":"tide"}]'
+        ad.datadoghq.com/keeper.logs: '[{"source":"lighthouse","service":"keeper"}]'
       labels:
         draft: draft-app
         app: lighthouse-keeper
@@ -35,7 +35,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: lighthouse-keeper
-          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.683
+          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.826
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
@@ -83,11 +83,3 @@ spec:
             requests:
               cpu: 100m
               memory: 128Mi
-          volumeMounts:
-            - name: config
-              mountPath: /etc/config
-              readOnly: true
-      volumes:
-        - name: config
-          configMap:
-            name: config
