@@ -16,4 +16,4 @@ spec:
               serviceName: jenkins-x-chartmuseum
               servicePort: 8080
             path: "/"
-      host: chartmuseum-jx.34.71.101.110.nip.io
+      host: chartmuseum-jx.34.66.77.190.nip.io
