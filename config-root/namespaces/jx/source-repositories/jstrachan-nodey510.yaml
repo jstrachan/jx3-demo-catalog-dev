@@ -18,5 +18,5 @@ spec:
   repo: nodey510
   scheduler:
     kind: ""
-    name: ""
+    name: blank
   url: https://github.com/jstrachan/nodey510

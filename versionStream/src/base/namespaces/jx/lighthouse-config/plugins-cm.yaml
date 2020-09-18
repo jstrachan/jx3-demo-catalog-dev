@@ -42,6 +42,7 @@ data:
       - dog
       - pony
       jstrachan/nodey510:
+      - config-updater
       - approve
       - assign
       - blunderbuss
@@ -49,12 +50,12 @@ data:
       - hold
       - lgtm
       - lifecycle
-      - override
       - size
       - trigger
       - wip
       - heart
       - cat
+      - override
       - dog
       - pony
     requiresig: {}
