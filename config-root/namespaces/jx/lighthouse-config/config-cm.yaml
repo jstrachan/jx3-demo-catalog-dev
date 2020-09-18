@@ -60,7 +60,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
-      target_url: http://deck-jx.
+      target_url: http://deck-jx.34.71.101.110.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
