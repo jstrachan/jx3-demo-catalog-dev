@@ -7,38 +7,60 @@ buildPacks:
     gitRef: master
     gitURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
 cluster:
-  clusterName: ""
-  devEnvApprovers:
-  - todo
-  environmentGitOwner: "todo"
+  clusterName: jstrachan-catalog
+  environmentGitOwner: todo
   gitKind: github
   gitName: github
   gitServer: https://github.com
+  gke:
+    projectNumber: "688875092189"
   namespace: jx
-  project:  ""
+  project: jenkins-x-labs-bdd
   provider: gke
   registry: gcr.io
-  zone: ""
+  zone: us-central1-a
 environments:
-- key: dev
-  owner: ""
-  repository: ""
-- key: staging
-  owner: ""
-  repository: ""
-- key: production
-  owner: ""
-  repository: ""
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  owner: jstrachan
+  repository: jx3-demo-catalog-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
 gitops: true
 ingress:
-  domain: ""
+  domain: 34.71.101.110.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
-    production: false
+    production: true
 kaniko: true
+pipelineUser:
+  username: jstrachan
 repository: nexus
 secretStorage: gsm
 storage:
@@ -46,14 +68,14 @@ storage:
     enabled: false
     url: ""
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://logs-jstrachan-catalog-603ac27e92d4
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://reports-jstrachan-catalog-603ac27e92d4
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://repository-jstrachan-catalog-603ac27e92d4
 vault: {}
 velero:
   schedule: ""
