@@ -3,5 +3,6 @@ metadata:
 spec:
   groups:
   - owner: jstrachan
+    scheduler: blank
     repositories:
     - name: nodey510
