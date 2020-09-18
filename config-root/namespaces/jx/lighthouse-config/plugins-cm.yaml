@@ -6,6 +6,10 @@ data:
       repos:
       - jstrachan/jx3-demo-catalog-dev
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - jstrachan/nodey510
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -37,6 +41,22 @@ data:
       - override
       - dog
       - pony
+      jstrachan/nodey510:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -49,6 +69,11 @@ data:
     - repos:
       - jstrachan/jx3-demo-catalog-dev
       trusted_org: todo
+    - repos:
+      - jstrachan/nodey510
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
