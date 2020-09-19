@@ -51,7 +51,7 @@ releases:
   name: tekton
   namespace: tekton-pipelines
 - chart: jenkins-x/lighthouse
-  version: 0.0.826
+  version: 0.0.827
   name: lighthouse
   namespace: jx
   values:
