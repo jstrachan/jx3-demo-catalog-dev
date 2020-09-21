@@ -6,10 +6,6 @@ data:
       repos:
       - jstrachan/jx3-demo-catalog-dev
       require_self_approval: true
-    - lgtm_acts_as_approve: true
-      repos:
-      - jstrachan/nodey510
-      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -39,21 +35,6 @@ data:
       - heart
       - cat
       - override
-      jstrachan/nodey510:
-      - config-updater
-      - approve
-      - assign
-      - blunderbuss
-      - help
-      - hold
-      - lgtm
-      - lifecycle
-      - size
-      - trigger
-      - wip
-      - heart
-      - cat
-      - override
     requiresig: {}
     sigmention: {}
     size:
@@ -66,15 +47,8 @@ data:
     - repos:
       - jstrachan/jx3-demo-catalog-dev
       trusted_org: todo
-    - repos:
-      - jstrachan/nodey510
-      trusted_org: todo
-    welcome:
-    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: plugins
   namespace: jx
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'

@@ -12,9 +12,7 @@ data:
       protect-tested-repos: true
     github:
       LinkURL: null
-    in_repo_config:
-      enabled:
-        '*': true
+    in_repo_config: {}
     plank: {}
     pod_namespace: jx
     postsubmits:
@@ -42,7 +40,6 @@ data:
         skip-unknown-contexts: false
       merge_method:
         jstrachan/jx3-demo-catalog-dev: merge
-        jstrachan/nodey510: merge
       queries:
       - labels:
         - approved
@@ -64,11 +61,9 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
-      target_url: http://deck-jx.34.71.101.110.nip.io
+      target_url: http://deck-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: config
   namespace: jx
-  labels:
-    gitops.jenkins-x.io/pipeline: 'namespaces'

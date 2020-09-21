@@ -1,33 +1,34 @@
-# Source: lighthouse/templates/foghorn-deployment.yaml
+# Source: lighthouse/templates/webhooks-deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lighthouse-foghorn
+  name: lighthouse-webhooks
   labels:
     draft: draft-app
     chart: "lighthouse-0.0.827"
-    app: lighthouse-foghorn
+    app: lighthouse-webhooks
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  namespace: jx
   annotations:
+    checksum/config: b866a8551cd684743d843058fcbf005c2792e590f4989d22e3ecbcad2a98758a
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: '912e78d7d9dc08df5e0e7867a3367bbc00881e3934b5d1160dc49617cedae593'
+    jenkins-x.io/hash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+  namespace: jx
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       draft: draft-app
-      app: lighthouse-foghorn
+      app: lighthouse-webhooks
   template:
     metadata:
       labels:
         draft: draft-app
-        app: lighthouse-foghorn
+        app: lighthouse-webhooks
     spec:
-      serviceAccountName: lighthouse-foghorn
+      serviceAccountName: lighthouse-webhooks
       containers:
-        - name: lighthouse-foghorn
-          image: gcr.io/jenkinsxio/lighthouse-foghorn:0.0.0-SNAPSHOT-PR-1072-3
+        - name: lighthouse-webhooks
+          image: gcr.io/jenkinsxio/lighthouse-webhooks:0.0.0-SNAPSHOT-PR-1072-3
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
@@ -43,12 +44,34 @@ spec:
                 secretKeyRef:
                   name: lighthouse-oauth-token
                   key: oauth
+            - name: "HMAC_TOKEN"
+              valueFrom:
+                secretKeyRef:
+                  name: "lighthouse-hmac-token"
+                  key: hmac
             - name: "JX_LOG_FORMAT"
               value: "json"
             - name: "LOGRUS_FORMAT"
               value: "json"
             - name: JX_DEFAULT_IMAGE
               value: "gcr.io/jenkinsxio/builder-maven:2.1.142-761"
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
           resources:
             limits:
               cpu: 100m
