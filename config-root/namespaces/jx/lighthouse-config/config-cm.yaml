@@ -12,7 +12,9 @@ data:
       protect-tested-repos: true
     github:
       LinkURL: null
-    in_repo_config: {}
+    in_repo_config:
+      enabled:
+        '*': true
     plank: {}
     pod_namespace: jx
     postsubmits:
