@@ -42,6 +42,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         jstrachan/jx3-demo-catalog-dev: merge
+        jstrachan/nodey510: merge
       queries:
       - labels:
         - approved
