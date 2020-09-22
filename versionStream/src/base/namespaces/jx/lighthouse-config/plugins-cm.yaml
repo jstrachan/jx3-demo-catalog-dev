@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - jstrachan/nodey500
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - jstrachan/nodey510
       require_self_approval: true
     cat: {}
@@ -39,6 +43,22 @@ data:
       - heart
       - cat
       - override
+      jstrachan/nodey500:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       jstrachan/nodey510:
       - config-updater
       - approve
@@ -66,6 +86,9 @@ data:
     - repos:
       - jstrachan/jx3-demo-catalog-dev
       trusted_org: todo
+    - repos:
+      - jstrachan/nodey500
+      trusted_org: jstrachan
     - repos:
       - jstrachan/nodey510
       trusted_org: todo
