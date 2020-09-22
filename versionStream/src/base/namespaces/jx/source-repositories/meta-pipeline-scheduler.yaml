@@ -3,6 +3,7 @@ kind: Scheduler
 metadata:
   creationTimestamp: null
   name: jx-meta-pipeline
+  namespace: jx
 spec:
   approve:
     issueRequired: false
