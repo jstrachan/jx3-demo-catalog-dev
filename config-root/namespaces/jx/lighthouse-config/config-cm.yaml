@@ -9,6 +9,10 @@ data:
               required_status_checks:
                 contexts:
                 - promotion-build
+            nodey500:
+              required_status_checks:
+                contexts:
+                - pr-build
       protect-tested-repos: true
     github:
       LinkURL: null
@@ -24,12 +28,25 @@ data:
         - master
         name: promotion
         skip_report: true
+      jstrachan/nodey500:
+      - agent: tekton
+        branches:
+        - master
+        name: release
+        skip_report: true
     presubmits:
       jstrachan/jx3-demo-catalog-dev:
       - agent: tekton
         always_run: true
         context: promotion-build
         name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      jstrachan/nodey500:
+      - agent: tekton
+        always_run: true
+        context: pr-build
+        name: pr-build
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
     prowjob_namespace: jx
@@ -42,6 +59,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         jstrachan/jx3-demo-catalog-dev: merge
+        jstrachan/nodey500: merge
         jstrachan/nodey510: merge
       queries:
       - labels:
@@ -54,6 +72,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey500
       - labels:
         - updatebot
         missingLabels:
@@ -64,6 +83,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey500
       target_url: http://deck-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
