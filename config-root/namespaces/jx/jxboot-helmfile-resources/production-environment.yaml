@@ -11,5 +11,5 @@ metadata:
 spec:
   kind: Permanent
   label: Production
-  promotionStrategy: "Manual"
+  promotionStrategy: "Auto"
   namespace: "jx-production"

@@ -41,6 +41,7 @@ jxRequirements:
         enabled: false
         production: false
     key: staging
+    promotionStrategy: Auto
   - ingress:
       domain: ""
       externalDNS: false
@@ -50,6 +51,7 @@ jxRequirements:
         enabled: false
         production: false
     key: production
+    promotionStrategy: Auto
   gitops: true
   ingress:
     domain: 34.66.77.190.nip.io
