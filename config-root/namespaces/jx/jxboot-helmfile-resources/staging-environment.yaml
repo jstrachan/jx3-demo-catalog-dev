@@ -13,3 +13,4 @@ spec:
   label: Staging
   namespace: jx-staging
   promotionStrategy: "Auto"
+  order: 100
