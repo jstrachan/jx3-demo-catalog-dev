@@ -50,6 +50,8 @@ releases:
   version: 0.0.2
   name: tekton
   namespace: tekton-pipelines
+  values:
+  - versionStream/charts/cdf/tekton-pipeline/values.yaml.gotmpl
 - chart: jenkins-x/lighthouse
   version: 0.0.831
   name: lighthouse
