@@ -56,6 +56,10 @@ spec:
           type: string
         stepTemplate:
           env:
+          - name: PULL_NUMBER
+            value: $(params.PULL_NUMBER)
+          - name: REPO_URL
+            value: $(params.REPO_URL)
           - name: PIPELINE_KIND
             value: pullrequest
           - name: JX_BATCH_MODE
