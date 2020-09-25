@@ -1,0 +1,52 @@
+# Source: nodey510/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-09-25T15:46:17Z"
+  deletionTimestamp: null
+  name: 'nodey510-1.0.65'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.65
+      sha: 9c973c477baadcad17ceed6428ebe1d58445c0ac
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      message: |
+        fix: remove version
+      sha: a4f12bb5295a330be957534824ac6c797a93f9ab
+  gitCloneUrl: https://github.com/jstrachan/nodey510.git
+  gitHttpUrl: https://github.com/jstrachan/nodey510
+  gitOwner: jstrachan
+  gitRepository: nodey510
+  name: 'nodey510'
+  releaseNotesURL: https://github.com/jstrachan/nodey510/releases/tag/v
+  version: v
+status: {}
