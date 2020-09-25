@@ -12,6 +12,9 @@ metadata:
 spec:
   pipelineSpec:
     params:
+    - description: git pull request number
+      name: PULL_NUMBER
+      type: string
     - description: git url to clone
       name: REPO_URL
       type: string
@@ -26,6 +29,8 @@ spec:
     tasks:
     - name: from-build-pack
       params:
+      - name: PULL_NUMBER
+        value: $(params.PULL_NUMBER)
       - name: REPO_URL
         value: $(params.REPO_URL)
       - name: revision
@@ -35,6 +40,9 @@ spec:
       resources: {}
       taskSpec:
         params:
+        - description: git pull request number
+          name: PULL_NUMBER
+          type: string
         - description: git url to clone
           name: REPO_URL
           type: string
