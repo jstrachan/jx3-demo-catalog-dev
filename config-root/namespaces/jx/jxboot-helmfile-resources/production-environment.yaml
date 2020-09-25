@@ -11,5 +11,6 @@ metadata:
 spec:
   kind: Permanent
   label: Production
+  order: 500
   promotionStrategy: "Auto"
   namespace: "jx-production"
