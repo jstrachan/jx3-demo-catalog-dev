@@ -1,0 +1,70 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    branch-protection:
+      orgs:
+        jstrachan:
+          repos:
+            jx3-demo-catalog-dev:
+              required_status_checks:
+                contexts:
+                - promotion-build
+      protect-tested-repos: true
+    github:
+      LinkURL: null
+    in_repo_config: {}
+    plank: {}
+    pod_namespace: jx
+    postsubmits:
+      jstrachan/jx3-demo-catalog-dev:
+      - agent: tekton
+        branches:
+        - master
+        name: promotion
+        skip_report: true
+    presubmits:
+      jstrachan/jx3-demo-catalog-dev:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+    prowjob_namespace: jx
+    push_gateway:
+      serve_metrics: false
+    tide:
+      context_options:
+        from-branch-protection: true
+        required-if-present-contexts: null
+        skip-unknown-contexts: false
+      merge_method:
+        jstrachan/jx3-demo-catalog-dev: merge
+        jstrachan/nodey510: merge
+      queries:
+      - labels:
+        - approved
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - jstrachan/jx3-demo-catalog-dev
+      - labels:
+        - updatebot
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - jstrachan/jx3-demo-catalog-dev
+      target_url: http://deck-jx.34.66.77.190.nip.io
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: config
+  namespace: jx
