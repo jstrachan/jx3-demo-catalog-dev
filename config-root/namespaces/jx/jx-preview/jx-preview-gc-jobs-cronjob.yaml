@@ -24,7 +24,7 @@ spec:
           containers:
             - command:
                 - jx-preview
-              image: gcr.io/jenkinsxio/jx-preview:0.0.82
+              image: gcr.io/jenkinsxio/jx-preview:0.0.84
               imagePullPolicy: IfNotPresent
               args:
                 - gc
