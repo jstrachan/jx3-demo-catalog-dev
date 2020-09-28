@@ -12,8 +12,6 @@ cluster:
   gitKind: github
   gitName: github
   gitServer: https://github.com
-  gke:
-    projectNumber: "688875092189"
   namespace: jx
   project: jenkins-x-labs-bdd
   provider: gke

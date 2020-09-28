@@ -14,7 +14,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
-        '*': true
+        jstrachan/nodey510: true
     plank: {}
     pod_namespace: jx
     postsubmits:
