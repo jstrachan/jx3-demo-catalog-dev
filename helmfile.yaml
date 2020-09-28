@@ -17,6 +17,8 @@ repositories:
   url: https://kubernetes-charts.storage.googleapis.com
 - name: cdf
   url: https://cdfoundation.github.io/tekton-helm-chart
+- name: dev
+  url: http://chartmuseum-jx.34.66.77.190.nip.io/
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
   version: 0.0.307
@@ -75,5 +77,9 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
+- chart: dev/nodey400
+  version: 0.0.10
+  name: nodey400
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
