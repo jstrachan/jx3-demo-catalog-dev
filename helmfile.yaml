@@ -81,5 +81,9 @@ releases:
   version: 0.0.14
   name: nodey400
   namespace: jx-staging
+- chart: dev/nodey400
+  version: 0.0.14
+  name: nodey400
+  namespace: jx-production
 templates: {}
 missingFileHandler: ""
