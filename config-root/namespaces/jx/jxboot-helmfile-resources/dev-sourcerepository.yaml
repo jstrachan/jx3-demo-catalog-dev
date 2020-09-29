@@ -10,6 +10,7 @@ metadata:
 spec:
   description: "the git repository for the Dev environment"
   provider: "https://github.com"
+  providerKind: 'github'
   providerName: 'github'
   org: "jstrachan"
   repo: "jx3-demo-catalog-dev"
@@ -17,4 +18,4 @@ spec:
   url: "https://github.com/jstrachan/jx3-demo-catalog-dev.git"
   scheduler:
     kind: Scheduler
-    name: "environment"
+    name: "in-repo"

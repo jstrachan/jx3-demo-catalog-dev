@@ -18,5 +18,5 @@ spec:
   repo: nodey400
   scheduler:
     kind: ""
-    name: default
+    name: jx-meta-pipeline
   url: https://github.com/jstrachan/nodey400
