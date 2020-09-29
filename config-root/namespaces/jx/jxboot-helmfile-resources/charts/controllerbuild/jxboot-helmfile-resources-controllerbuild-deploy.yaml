@@ -24,7 +24,7 @@ spec:
         release: jxboot-helmfile-resources
     spec:
       restartPolicy: Always
-      serviceAccountName: jxboot-helmfile-resources-controllerbuild
+      serviceAccountName: jenkins-x-controllerbuild
       containers:
         - name: controllerbuild
           command: [jx]
@@ -36,7 +36,7 @@ spec:
             - --git-reporting
             - --verbose
           imagePullPolicy: IfNotPresent
-          image: "gcr.io/jenkinsxio-labs-private/jxl:0.0.208"
+          image: "gcr.io/jenkinsxio/builder-go:2.1.150-769"
           ports:
             - name: http
               containerPort: 80

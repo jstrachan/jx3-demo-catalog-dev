@@ -12,5 +12,5 @@ roleRef:
   name: controllerbuild
 subjects:
   - kind: ServiceAccount
-    name: jxboot-helmfile-resources-controllerbuild
+    name: jenkins-x-controllerbuild
     namespace: jx

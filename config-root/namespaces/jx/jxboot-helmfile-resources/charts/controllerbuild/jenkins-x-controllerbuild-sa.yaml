@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: jxboot-helmfile-resources-controllerbuild
+  name: jenkins-x-controllerbuild
   labels:
     app: controllerbuild
     chart: controllerbuild-2.0.1143
