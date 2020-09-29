@@ -78,7 +78,7 @@ releases:
   name: pusher-wave
   namespace: secret-infra
 - chart: dev/nodey400
-  version: 0.0.14
+  version: 0.0.16
   name: nodey400
   namespace: jx-staging
 - chart: dev/nodey400
