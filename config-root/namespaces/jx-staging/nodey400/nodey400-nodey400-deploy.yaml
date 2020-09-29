@@ -5,7 +5,7 @@ metadata:
   name: nodey400-nodey400
   labels:
     draft: draft-app
-    chart: "nodey400-0.0.14"
+    chart: "nodey400-0.0.16"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx-staging
   annotations:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: nodey400
-          image: "gcr.io/jenkins-x-labs-bdd/nodey400:0.0.14"
+          image: "gcr.io/jenkins-x-labs-bdd/nodey400:0.0.16"
           imagePullPolicy: IfNotPresent
           env:
           envFrom: null
