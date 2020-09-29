@@ -347,7 +347,6 @@ data:
                 value: $(params.REPO_OWNER)
               - name: REPO_URL
                 value: $(params.REPO_URL)
-              resources: {}
               taskSpec:
                 params:
                 - description: git url to clone
@@ -425,6 +424,8 @@ data:
                     value: $(params.REPO_OWNER)
                   - name: REPO_URL
                     value: $(params.REPO_URL)
+                  - name: XDG_CONFIG_HOME
+                    value: /tekton/home
                   name: ""
                   resources:
                     requests:
@@ -448,6 +449,14 @@ data:
                   resources: {}
                   workingDir: /workspace
                 - args:
+                  - '[ -d /builder/home ] || mkdir -p /builder && ln -s /tekton/home /builder/home'
+                  command:
+                  - /bin/sh
+                  - -c
+                  image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
+                  name: setup-builder-home
+                  resources: {}
+                - args:
                   - gitops
                   - git
                   - setup
@@ -459,14 +468,6 @@ data:
                   name: git-setup
                   resources: {}
                   workingDir: /workspace
-                - args:
-                  - '[ -d /builder/home ] || mkdir -p /builder && ln -s /tekton/home /builder/home'
-                  command:
-                  - /bin/sh
-                  - -c
-                  image: gcr.io/jenkinsxio/builder-jx:2.1.142-761
-                  name: setup-builder-home
-                  resources: {}
                 - args:
                   - step
                   - git
@@ -500,7 +501,7 @@ data:
                   name: create-effective-pipeline
                   resources: {}
                 - args:
-                  - source .jx/variables.sh && jx step create task --clone-dir /workspace/source --kind ${JOB_TYPE} --pr-number ${PULL_NUMBER} --service-account tekton-bot --source source --branch ${BRANCH_NAME} --build-number 1 --context ${JOB_NAME}
+                  - source .jx/variables.sh && jx step create task --clone-dir /workspace/source --kind ${PIPELINE_KIND} --pr-number ${PULL_NUMBER} --service-account tekton-bot --source source --branch ${BRANCH_NAME} --build-number 1 --context ${JOB_NAME}
                   command:
                   - /bin/sh
                   - -c
