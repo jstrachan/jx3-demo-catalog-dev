@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-09-29T14:30:44Z"
+  creationTimestamp: "2020-09-29T15:40:36Z"
   deletionTimestamp: null
-  name: 'nodey400-0.0.14'
+  name: 'nodey400-0.0.16'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,13 +24,13 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 0.0.14
-      sha: 2cce2e5b15bb48fa3987eccbe0bdcdb9724efac0
+        release 0.0.16
+      sha: 37a436722cb5a636080a775a1c34db927692d708
   gitCloneUrl: https://github.com/jstrachan/nodey400.git
   gitHttpUrl: https://github.com/jstrachan/nodey400
   gitOwner: jstrachan
   gitRepository: nodey400
   name: 'nodey400'
-  releaseNotesURL: https://github.com/jstrachan/nodey400/releases/tag/v0.0.14
-  version: v0.0.14
+  releaseNotesURL: https://github.com/jstrachan/nodey400/releases/tag/v0.0.16
+  version: v0.0.16
 status: {}
