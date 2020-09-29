@@ -20,13 +20,13 @@ jxRequirements:
     zone: us-central1-a
   environments:
   - ingress:
-      domain: ""
+      domain: 34.66.77.190.nip.io
       externalDNS: false
-      namespaceSubDomain: ""
+      namespaceSubDomain: -jx.
       tls:
         email: ""
         enabled: false
-        production: false
+        production: true
     key: dev
     owner: jstrachan
     repository: jx3-demo-catalog-dev

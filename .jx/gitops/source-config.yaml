@@ -6,7 +6,5 @@ spec:
     scheduler: in-repo
     repositories:
     - name: nodey510
-    - name: nodey500
-      scheduler: jx-meta-pipeline
     - name: nodey400
-      scheduler: default
+      scheduler: jx-meta-pipeline
