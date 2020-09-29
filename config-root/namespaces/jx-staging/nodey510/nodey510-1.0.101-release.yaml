@@ -1,0 +1,66 @@
+# Source: nodey510/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-09-29T13:30:11Z"
+  deletionTimestamp: null
+  name: 'nodey510-1.0.101'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.101
+      sha: 81b6d45b4c385b9cee0e9e794e54a8bea474628f
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: 44d81c33174c76e1a61c80cd732d275c52b3b0ce
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: ff2be5bc50672bc513c147608e3804018284ca72
+  gitCloneUrl: https://github.com/jstrachan/nodey510.git
+  gitHttpUrl: https://github.com/jstrachan/nodey510
+  gitOwner: jstrachan
+  gitRepository: nodey510
+  name: 'nodey510'
+  releaseNotesURL: https://github.com/jstrachan/nodey510/releases/tag/v1.0.101
+  version: v1.0.101
+status: {}
