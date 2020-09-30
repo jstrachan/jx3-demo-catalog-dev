@@ -117,7 +117,7 @@ data:
       trusted_org: todo
     - repos:
       - jstrachan/nodey530
-      trusted_org: todo
+      trusted_org: jstrachan
     welcome:
     - message_template: Welcome
 kind: ConfigMap
