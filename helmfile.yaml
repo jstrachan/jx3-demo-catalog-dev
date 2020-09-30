@@ -77,5 +77,9 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
+- chart: dev/nodey530
+  version: 1.0.3
+  name: nodey530
+  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
