@@ -1,10 +1,17 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
 metadata:
   creationTimestamp: null
 spec:
   groups:
   - owner: jstrachan
-    scheduler: in-repo
     repositories:
-    - name: nodey510
     - name: nodey400
       scheduler: jx-meta-pipeline
+    - name: nodey510
+    scheduler: in-repo
+  - owner: jstrachan
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: nodey530
