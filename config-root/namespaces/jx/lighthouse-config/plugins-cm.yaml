@@ -14,6 +14,10 @@ data:
       repos:
       - jstrachan/nodey510
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - jstrachan/nodey530
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -77,6 +81,22 @@ data:
       - cat
       - dog
       - pony
+      jstrachan/nodey530:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -94,6 +114,9 @@ data:
       trusted_org: jstrachan
     - repos:
       - jstrachan/nodey510
+      trusted_org: todo
+    - repos:
+      - jstrachan/nodey530
       trusted_org: todo
     welcome:
     - message_template: Welcome

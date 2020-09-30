@@ -11,7 +11,7 @@ metadata:
   namespace: jx
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: '0c73f91d6a84feec997550a3f2e0ba445262ceed13f7a19349ac4ab7f9ec5c21'
+    jenkins-x.io/hash: 'b10d7d9a27867cf6e409fc033ddfe515a983c8afb651f3665311d6f08c01d315'
 spec:
   replicas: 1
   strategy:
