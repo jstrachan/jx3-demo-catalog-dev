@@ -2,6 +2,13 @@ apiVersion: v1
 data:
   config.yaml: |
     branch-protection:
+      orgs:
+        jstrachan:
+          repos:
+            nodey530:
+              required_status_checks:
+                contexts:
+                - pr-build
       protect-tested-repos: true
     github:
       LinkURL: null
@@ -264,6 +271,13 @@ data:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+      jstrachan/nodey530:
+      - agent: tekton
+        branches:
+        - master
+        labels:
+          aadpodidbinding: tekton-bot
+        name: release
     presubmits:
       jstrachan/nodey400:
       - agent: tekton-pipeline
@@ -519,6 +533,15 @@ data:
                   name: podinfo
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
+      jstrachan/nodey530:
+      - agent: tekton
+        always_run: true
+        context: pr-build
+        labels:
+          aadpodidbinding: tekton-bot
+        name: pr-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
     prowjob_namespace: jx
     push_gateway:
       serve_metrics: false
@@ -531,6 +554,7 @@ data:
         jstrachan/jx3-demo-catalog-dev: merge
         jstrachan/nodey400: merge
         jstrachan/nodey510: merge
+        jstrachan/nodey530: merge
       queries:
       - labels:
         - approved
@@ -542,6 +566,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/nodey400
+        - jstrachan/nodey530
       - labels:
         - updatebot
         missingLabels:
@@ -552,6 +577,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/nodey400
+        - jstrachan/nodey530
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
