@@ -15,3 +15,4 @@ spec:
     providerKind: github
     repositories:
     - name: nodey530
+      scheduler: jx-meta-pipeline
