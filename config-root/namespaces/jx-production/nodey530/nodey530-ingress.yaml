@@ -15,4 +15,4 @@ spec:
           - backend:
               serviceName: nodey530
               servicePort: 80
-      host: nodey530-jx.34.66.77.190.nip.io
+      host: nodey530-jx-production.34.66.77.190.nip.io
