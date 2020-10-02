@@ -1038,29 +1038,6 @@ data:
         jstrachan/nodey400: merge
         jstrachan/nodey510: merge
         jstrachan/nodey530: merge
-      queries:
-      - labels:
-        - approved
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey530
-      - labels:
-        - updatebot
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey530
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
