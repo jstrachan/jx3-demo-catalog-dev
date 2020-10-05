@@ -2,19 +2,12 @@ apiVersion: v1
 data:
   config.yaml: |
     branch-protection:
-      orgs:
-        jstrachan:
-          repos:
-            nodey400:
-              required_status_checks:
-                contexts:
-                - pr-build
       protect-tested-repos: true
     github:
       LinkURL: null
     in_repo_config:
       enabled:
-        '*': true
+        jstrachan/nodey510: true
     plank: {}
     pod_namespace: jx
     postsubmits:
@@ -62,29 +55,6 @@ data:
         jstrachan/nodey400: merge
         jstrachan/nodey500: merge
         jstrachan/nodey510: merge
-      queries:
-      - labels:
-        - approved
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey500
-      - labels:
-        - updatebot
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey500
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
