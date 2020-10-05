@@ -1,0 +1,51 @@
+# Source: nodey400/templates/deployment.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nodey400-nodey400
+  labels:
+    draft: draft-app
+    chart: "nodey400-0.0.20"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: nodey400-nodey400
+    spec:
+      containers:
+        - name: nodey400
+          image: "gcr.io/jenkins-x-labs-bdd/nodey400:0.0.20"
+          imagePullPolicy: IfNotPresent
+          env:
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 100m
+              memory: 256Mi
+            requests:
+              cpu: 80m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
