@@ -97,6 +97,7 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -349,6 +350,7 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -602,6 +604,7 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -856,6 +859,7 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
