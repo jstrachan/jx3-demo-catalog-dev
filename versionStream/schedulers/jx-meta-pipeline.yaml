@@ -295,6 +295,7 @@ spec:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+            serviceAccountName: tekton-bot
 
   presubmits:
     entries:
@@ -552,6 +553,8 @@ spec:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+            serviceAccountName: tekton-bot
+
         queries:
           - excludedBranches: { }
             included_branches: { }
