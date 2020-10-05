@@ -97,7 +97,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -267,6 +266,7 @@ data:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+          serviceAccountName: tekton-bot
       jstrachan/nodey530:
       - agent: tekton-pipeline
         branches:
@@ -350,7 +350,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -520,6 +519,7 @@ data:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+          serviceAccountName: tekton-bot
     presubmits:
       jstrachan/nodey400:
       - agent: tekton-pipeline
@@ -604,7 +604,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -774,6 +773,7 @@ data:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+          serviceAccountName: tekton-bot
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
       jstrachan/nodey530:
@@ -859,7 +859,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -1029,6 +1028,7 @@ data:
                         fieldPath: metadata.labels
                       path: labels
                   name: podinfo
+          serviceAccountName: tekton-bot
         rerun_command: /test this
         trigger: (?m)^/test( all| this),?(\s+|$)
     prowjob_namespace: jx
