@@ -20,7 +20,7 @@ spec:
   teamSettings:
     appsRepository: http://chartmuseum.jenkins-x.io
     buildPackRef: "master"
-    buildPackUrl: "https://github.com/jenkins-x/jxr-packs-kubernetes.git"
+    buildPackUrl: "https://github.com/jenkins-x/jx3-pipeline-catalog.git"
     defaultScheduler:
       apiVersion: jenkins.io/v1
       kind: Scheduler
