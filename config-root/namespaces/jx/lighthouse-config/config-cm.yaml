@@ -1048,8 +1048,8 @@ data:
         - needs-ok-to-test
         - needs-rebase
         repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey530
+        - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey510
       - labels:
         - updatebot
         missingLabels:
@@ -1059,8 +1059,8 @@ data:
         - needs-ok-to-test
         - needs-rebase
         repos:
-        - jstrachan/nodey400
-        - jstrachan/nodey530
+        - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey510
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:

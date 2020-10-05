@@ -5,13 +5,13 @@ metadata:
   name: lighthouse-keeper
   labels:
     draft: draft-app
-    chart: "lighthouse-0.0.831"
+    chart: "lighthouse-0.0.843"
     app: lighthouse-keeper
     gitops.jenkins-x.io/pipeline: 'namespaces'
   namespace: jx
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
-    jenkins-x.io/hash: 'ed9dc57001393b5bceaa5fe39326806a2663e597116f5be8c77bc80e92329d8f'
+    jenkins-x.io/hash: 'e840852ce631ed37113732cf3c8ee356679d216087a0f33c4dbc56bdd99754e1'
 spec:
   replicas: 1
   strategy:
@@ -35,7 +35,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: lighthouse-keeper
-          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.831
+          image: gcr.io/jenkinsxio/lighthouse-keeper:0.0.843
           imagePullPolicy: IfNotPresent
           args:
             - "--namespace=jx"
