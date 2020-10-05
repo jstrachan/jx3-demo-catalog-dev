@@ -95,6 +95,7 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -349,6 +350,7 @@ data:
                 value: $(params.REPO_URL)
               resources: {}
               taskSpec:
+                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -530,27 +532,6 @@ data:
         jstrachan/jx3-demo-catalog-dev: merge
         jstrachan/nodey400: merge
         jstrachan/nodey510: merge
-      queries:
-      - labels:
-        - approved
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
-      - labels:
-        - updatebot
-        missingLabels:
-        - do-not-merge
-        - do-not-merge/hold
-        - do-not-merge/work-in-progress
-        - needs-ok-to-test
-        - needs-rebase
-        repos:
-        - jstrachan/nodey400
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
