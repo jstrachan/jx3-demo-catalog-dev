@@ -86,7 +86,7 @@ releases:
   name: nodey530
   namespace: jx-production
 - chart: dev/nodey531
-  version: 1.0.0
+  version: 1.0.1
   name: nodey531
   namespace: jx-staging
 templates: {}
