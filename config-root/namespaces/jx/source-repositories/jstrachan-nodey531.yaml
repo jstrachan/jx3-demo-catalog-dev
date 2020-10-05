@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jstrachan
+    provider: github
+    repository: nodey531
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jstrachan-nodey531
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jstrachan/nodey531.git
+  org: jstrachan
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: nodey531
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jstrachan/nodey531

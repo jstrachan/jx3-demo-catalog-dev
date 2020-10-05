@@ -9,6 +9,7 @@ data:
       enabled:
         jstrachan/jx3-demo-catalog-dev: true
         jstrachan/nodey510: true
+        jstrachan/nodey531: true
     plank: {}
     pod_namespace: jx
     postsubmits:
@@ -1038,6 +1039,7 @@ data:
         jstrachan/nodey400: merge
         jstrachan/nodey510: merge
         jstrachan/nodey530: merge
+        jstrachan/nodey531: merge
       queries:
       - labels:
         - approved
@@ -1050,6 +1052,7 @@ data:
         repos:
         - jstrachan/jx3-demo-catalog-dev
         - jstrachan/nodey510
+        - jstrachan/nodey531
       - labels:
         - updatebot
         missingLabels:
@@ -1061,6 +1064,7 @@ data:
         repos:
         - jstrachan/jx3-demo-catalog-dev
         - jstrachan/nodey510
+        - jstrachan/nodey531
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
