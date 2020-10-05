@@ -16,3 +16,5 @@ spec:
     repositories:
     - name: nodey530
       scheduler: jx-meta-pipeline
+    - name: nodey531
+      scheduler: in-repo
