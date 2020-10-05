@@ -125,8 +125,9 @@ verify-install:
 
 .PHONY: verify
 verify: dev-ns verify-ingress
+	# TODO not sure we need this...
 	jx verify env
-	jx verify webhooks --verbose --warn-on-fail
+	jx gitops webhook update --warn-on-fail
 
 .PHONY: dev-ns verify-ignore
 verify-ignore: verify-ingress-ignore
@@ -149,6 +150,7 @@ git-setup:
 
 .PHONY: regen-check
 regen-check:
+	jx gitops git setup
 	jx gitops apply
 
 .PHONY: regen-check-old
@@ -208,7 +210,7 @@ pr: all commit push-pr-branch
 
 .PHONY: push-pr-branch
 push-pr-branch:
-	jx gitops pr push
+	jx gitops pr push --ignore-no-pr
 
 .PHONY: push
 push:
