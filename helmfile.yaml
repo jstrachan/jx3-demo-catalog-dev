@@ -101,5 +101,9 @@ releases:
   version: 0.0.20
   name: nodey400
   namespace: jx-production
+- chart: dev/nodey510
+  version: 1.0.108
+  name: nodey510
+  namespace: jx-production
 templates: {}
 missingFileHandler: ""
