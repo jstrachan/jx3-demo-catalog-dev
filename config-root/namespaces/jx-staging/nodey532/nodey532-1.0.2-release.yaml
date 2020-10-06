@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-05T11:07:07Z"
+  creationTimestamp: "2020-10-06T11:27:27Z"
   deletionTimestamp: null
-  name: 'nodey532-1.0.1'
+  name: 'nodey532-1.0.2'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.1
-      sha: e97e683894c21bfa3f5d16f3ef3e65195d6db5df
+        release 1.0.2
+      sha: a4a6a70e105552a2f47caf6f40e6f90befbf2bc5
     - author:
         accountReference:
           - id: jstrachan-0
@@ -40,8 +40,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.1
-      sha: 7b1e9c452c5e5c611a81b211f85d873601ef2d27
+        release 1.0.2
+      sha: e4da89698713a38fb08e82e0dac557cd24bcdbbc
     - author:
         accountReference:
           - id: james-strachan-0
@@ -51,18 +51,17 @@ spec:
       branch: master
       committer:
         accountReference:
-          - id: james-strachan-0
+          - id: github-0
             provider: jenkins.io/git-github-userid
-        email: james.strachan@gmail.com
-        name: James Strachan
-      message: |
-        update .lighthouse/jenkins-x (https://github.com/jenkins-x/jx3-pipeline-catalog.git) from master (8c433ccb341770d38f32dc5d420f209fdb3c11bf) to master (3c7aba5c4c85e500665db2cd617b07215d70ff19)
-      sha: a1e8f454e7eff337b43380daab82dccf5aeffdc9
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: fad5de47bf0148f11ca36cc9a0e973370a6ffffd
   gitCloneUrl: https://github.com/jstrachan/nodey532.git
   gitHttpUrl: https://github.com/jstrachan/nodey532
   gitOwner: jstrachan
   gitRepository: nodey532
   name: 'nodey532'
-  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.1
-  version: v1.0.1
+  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.2
+  version: v1.0.2
 status: {}
