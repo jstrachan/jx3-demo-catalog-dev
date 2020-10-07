@@ -14,6 +14,8 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: demo301
+      scheduler: in-repo
     - name: nodey530
       scheduler: jx-meta-pipeline
     - name: nodey531
