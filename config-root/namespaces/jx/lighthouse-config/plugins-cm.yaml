@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - jstrachan/demo301
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - jstrachan/nodey400
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -40,6 +44,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      jstrachan/demo301:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       jstrachan/jx3-demo-catalog-dev:
       - config-updater
       - approve
@@ -148,6 +168,9 @@ data:
     triggers:
     - repos:
       - jstrachan/jx3-demo-catalog-dev
+      trusted_org: todo
+    - repos:
+      - jstrachan/demo301
       trusted_org: todo
     - repos:
       - jstrachan/nodey400
