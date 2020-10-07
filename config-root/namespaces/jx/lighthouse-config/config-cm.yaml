@@ -18,6 +18,7 @@ data:
       - agent: tekton-pipeline
         branches:
         - master
+        - main
         labels:
           aadpodidbinding: tekton-bot
         name: release
@@ -68,7 +69,7 @@ data:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -97,7 +98,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -272,6 +272,7 @@ data:
       - agent: tekton-pipeline
         branches:
         - master
+        - main
         labels:
           aadpodidbinding: tekton-bot
         name: release
@@ -322,7 +323,7 @@ data:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -351,7 +352,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -577,7 +577,7 @@ data:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -606,7 +606,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -833,7 +832,7 @@ data:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -862,7 +861,6 @@ data:
               - name: REPO_URL
                 value: $(params.REPO_URL)
               taskSpec:
-                metadata: {}
                 params:
                 - description: git url to clone
                   name: REPO_URL
@@ -1061,7 +1059,9 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey400
         - jstrachan/nodey510
+        - jstrachan/nodey530
         - jstrachan/nodey531
         - jstrachan/nodey532
       - labels:
@@ -1074,7 +1074,9 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/nodey400
         - jstrachan/nodey510
+        - jstrachan/nodey530
         - jstrachan/nodey531
         - jstrachan/nodey532
       target_url: http://deck-jx.-jx.34.66.77.190.nip.io
