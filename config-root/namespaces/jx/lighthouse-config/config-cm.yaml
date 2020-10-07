@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        jstrachan/demo301: true
         jstrachan/jx3-demo-catalog-dev: true
         jstrachan/nodey510: true
         jstrachan/nodey531: true
@@ -1046,6 +1047,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        jstrachan/demo301: merge
         jstrachan/jx3-demo-catalog-dev: merge
         jstrachan/nodey400: merge
         jstrachan/nodey510: merge
@@ -1063,6 +1065,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/demo301
         - jstrachan/nodey400
         - jstrachan/nodey510
         - jstrachan/nodey530
@@ -1078,6 +1081,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo-catalog-dev
+        - jstrachan/demo301
         - jstrachan/nodey400
         - jstrachan/nodey510
         - jstrachan/nodey530
