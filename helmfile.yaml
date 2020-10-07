@@ -21,7 +21,7 @@ repositories:
   url: http://chartmuseum-jx.34.66.77.190.nip.io/
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
-  version: 1.0.2
+  version: 1.0.3
   name: jxboot-helmfile-resources
   namespace: jx
   values:
