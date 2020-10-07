@@ -79,6 +79,7 @@ releases:
   namespace: secret-infra
 - chart: jx3/jx-pipelines-visualizer
   name: jx-pipelines-visualizer
+  version: 0.0.10
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
