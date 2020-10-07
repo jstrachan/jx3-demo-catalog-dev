@@ -78,7 +78,7 @@ releases:
   name: pusher-wave
   namespace: secret-infra
 - chart: dev/nodey532
-  version: 1.0.13
+  version: 1.0.14
   name: nodey532
   namespace: jx-staging
 - chart: dev/nodey530
