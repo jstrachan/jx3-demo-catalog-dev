@@ -90,7 +90,7 @@ releases:
   name: nodey531
   namespace: jx-staging
 - chart: dev/nodey532
-  version: 1.0.6
+  version: 1.0.7
   name: nodey532
   namespace: jx-staging
 - chart: dev/nodey400
