@@ -80,5 +80,7 @@ releases:
 - chart: jx3/jx-pipelines-visualizer
   name: jx-pipelines-visualizer
   namespace: jx
+  values:
+  - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
 templates: {}
 missingFileHandler: ""
