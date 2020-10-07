@@ -12,7 +12,7 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     nginx.ingress.kubernetes.io/auth-realm: Authentication Required - Jenkins X Pipeline Dashboard
-    nginx.ingress.kubernetes.io/auth-secret: jx-basic-auth
+    nginx.ingress.kubernetes.io/auth-secret: jx-basic-auth-htpasswd
     nginx.ingress.kubernetes.io/auth-type: basic
   namespace: jx
 spec:
