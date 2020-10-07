@@ -1,0 +1,68 @@
+# Source: demo301/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-07T14:52:32Z"
+  deletionTimestamp: null
+  name: 'demo301-0.0.1'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 0.0.1
+      sha: 430c113fecc3435189e11a33ff7e20448cdaa0ad
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      message: |
+        fix:(plugins) use a better version of maven plugins
+      sha: 4bdfd2effc9190451a71651d20f1891a252092c4
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      message: |
+        Jenkins X build pack
+      sha: 806af4e166e2e924a886a371f2f6547108aeefd8
+  gitCloneUrl: https://github.com/jstrachan/demo301.git
+  gitHttpUrl: https://github.com/jstrachan/demo301
+  gitOwner: jstrachan
+  gitRepository: demo301
+  name: 'demo301'
+  releaseNotesURL: https://github.com/jstrachan/demo301/releases/tag/v0.0.1
+  version: v0.0.1
+status: {}
