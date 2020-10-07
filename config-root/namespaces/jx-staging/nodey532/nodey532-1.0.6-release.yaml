@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-06T11:27:27Z"
+  creationTimestamp: "2020-10-07T03:24:36Z"
   deletionTimestamp: null
-  name: 'nodey532-1.0.2'
+  name: 'nodey532-1.0.6'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.2
-      sha: a4a6a70e105552a2f47caf6f40e6f90befbf2bc5
+        release 1.0.6
+      sha: e6bc69d2bb9f5e8d2becac65760c8c3b813b1430
     - author:
         accountReference:
           - id: jstrachan-0
@@ -40,8 +40,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.2
-      sha: e4da89698713a38fb08e82e0dac557cd24bcdbbc
+        release 1.0.6
+      sha: bf1cc9fa181e938f698cbb3764b8e5c4ca45644b
     - author:
         accountReference:
           - id: james-strachan-0
@@ -56,12 +56,27 @@ spec:
         email: noreply@github.com
         name: GitHub
       message: Update index.html
-      sha: fad5de47bf0148f11ca36cc9a0e973370a6ffffd
+      sha: a086c129ce37779d435145f2f40e0ee3f9eb59ef
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: 23da7afbcee75ede6ea507d7cdadaaa7a73ef10c
   gitCloneUrl: https://github.com/jstrachan/nodey532.git
   gitHttpUrl: https://github.com/jstrachan/nodey532
   gitOwner: jstrachan
   gitRepository: nodey532
   name: 'nodey532'
-  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.2
-  version: v1.0.2
+  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.6
+  version: v1.0.6
 status: {}
