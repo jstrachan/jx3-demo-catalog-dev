@@ -78,5 +78,7 @@ releases:
   name: pusher-wave
   namespace: secret-infra
 - chart: jx3/jx-pipelines-visualizer
+  name: jx-pipelines-visualizer
+  namespace: jx
 templates: {}
 missingFileHandler: ""
