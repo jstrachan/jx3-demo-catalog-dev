@@ -2,10 +2,10 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-07T09:43:25Z"
+  creationTimestamp: "2020-10-07T10:08:50Z"
   deletionTimestamp: null
-  name: 'nodey530-1.0.6'
-  namespace: jx-staging
+  name: 'nodey530-1.0.10'
+  namespace: jx-production
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.6
-      sha: 844df47a8fe6d5fb67682411a632775629e3af75
+        release 1.0.10
+      sha: d3f8d5e0222707e257b3c67e3097d26ae6a86feb
     - author:
         accountReference:
           - id: jstrachan-0
@@ -40,8 +40,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.6
-      sha: 4af8995cac45c337544bd4efb913bbec44516fb0
+        release 1.0.10
+      sha: 9d6c77737b7bf26fe8bfe5ec23daba3074c9211c
     - author:
         accountReference:
           - id: jstrachan-0
@@ -57,7 +57,7 @@ spec:
         name: jstrachan
       message: |
         added variables
-      sha: d806ec40080e455cf9adc5f0eaa9e6d693db822f
+      sha: f23e0a5949251694bafe4811c00621402bc9e96b
     - author:
         accountReference:
           - id: james-strachan-0
@@ -72,12 +72,12 @@ spec:
         email: noreply@github.com
         name: GitHub
       message: Update index.html
-      sha: 830d66ce350d94fed8ab10db4e50dcf88e80ccb1
+      sha: adcd6ea487fb0efcc8461cf04cb0579b493fca0f
   gitCloneUrl: https://github.com/jstrachan/nodey530.git
   gitHttpUrl: https://github.com/jstrachan/nodey530
   gitOwner: jstrachan
   gitRepository: nodey530
   name: 'nodey530'
-  releaseNotesURL: https://github.com/jstrachan/nodey530/releases/tag/v1.0.6
-  version: v1.0.6
+  releaseNotesURL: https://github.com/jstrachan/nodey530/releases/tag/v1.0.10
+  version: v1.0.10
 status: {}

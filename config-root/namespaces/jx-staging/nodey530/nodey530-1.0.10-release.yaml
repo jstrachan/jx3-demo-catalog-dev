@@ -2,10 +2,10 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-07T07:01:31Z"
+  creationTimestamp: "2020-10-07T10:08:50Z"
   deletionTimestamp: null
-  name: 'nodey530-1.0.4'
-  namespace: jx-production
+  name: 'nodey530-1.0.10'
+  namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
@@ -24,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.4
-      sha: c102cb1861be2e154a7b40fb302709a4c0c3e114
+        release 1.0.10
+      sha: d3f8d5e0222707e257b3c67e3097d26ae6a86feb
     - author:
         accountReference:
           - id: jstrachan-0
@@ -40,8 +40,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.4
-      sha: e4438119a21748041ecc845892f2f0c4ea39ec0c
+        release 1.0.10
+      sha: 9d6c77737b7bf26fe8bfe5ec23daba3074c9211c
     - author:
         accountReference:
           - id: jstrachan-0
@@ -57,22 +57,7 @@ spec:
         name: jstrachan
       message: |
         added variables
-      sha: 0dbb196ef419b00d89e6877bb7b3b077c19958b4
-    - author:
-        accountReference:
-          - id: james-strachan-0
-            provider: jenkins.io/git-github-userid
-        email: james.strachan@gmail.com
-        name: James Strachan
-      branch: master
-      committer:
-        accountReference:
-          - id: github-0
-            provider: jenkins.io/git-github-userid
-        email: noreply@github.com
-        name: GitHub
-      message: Update jenkins-x.yml
-      sha: 1233cfd611a1d5280879c5f3fca44c181e3183cb
+      sha: f23e0a5949251694bafe4811c00621402bc9e96b
     - author:
         accountReference:
           - id: james-strachan-0
@@ -87,12 +72,12 @@ spec:
         email: noreply@github.com
         name: GitHub
       message: Update index.html
-      sha: 9caed7ff308e1a069b149b778733d94bab5fb1e6
+      sha: adcd6ea487fb0efcc8461cf04cb0579b493fca0f
   gitCloneUrl: https://github.com/jstrachan/nodey530.git
   gitHttpUrl: https://github.com/jstrachan/nodey530
   gitOwner: jstrachan
   gitRepository: nodey530
   name: 'nodey530'
-  releaseNotesURL: https://github.com/jstrachan/nodey530/releases/tag/v1.0.4
-  version: v1.0.4
+  releaseNotesURL: https://github.com/jstrachan/nodey530/releases/tag/v1.0.10
+  version: v1.0.10
 status: {}
