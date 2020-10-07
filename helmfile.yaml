@@ -77,17 +77,6 @@ releases:
   version: 1.0.0
   name: pusher-wave
   namespace: secret-infra
-- chart: dev/nodey532
-  version: 1.0.15
-  name: nodey532
-  namespace: jx-staging
-- chart: dev/nodey530
-  version: 1.0.12
-  name: nodey530
-  namespace: jx-staging
-- chart: dev/nodey530
-  version: 1.0.12
-  name: nodey530
-  namespace: jx-production
+- chart: jx3/jx-pipelines-visualizer
 templates: {}
 missingFileHandler: ""
