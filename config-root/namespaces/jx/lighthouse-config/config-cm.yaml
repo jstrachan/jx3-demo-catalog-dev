@@ -1083,7 +1083,7 @@ data:
         - jstrachan/nodey530
         - jstrachan/nodey531
         - jstrachan/nodey532
-      target_url: http://deck-jx.-jx.34.66.77.190.nip.io
+      target_url: http://dashboard-jx.34.66.77.190.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null

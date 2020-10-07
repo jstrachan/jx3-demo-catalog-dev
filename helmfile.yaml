@@ -78,8 +78,8 @@ releases:
   name: pusher-wave
   namespace: secret-infra
 - chart: jx3/jx-pipelines-visualizer
-  name: jx-pipelines-visualizer
   version: 0.0.10
+  name: jx-pipelines-visualizer
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
