@@ -44,6 +44,7 @@ spec:
       - agent: tekton-pipeline
         branches:
           - master
+          - main
         labels:
           aadpodidbinding: tekton-bot
         max_concurrency: 0
@@ -97,7 +98,7 @@ spec:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -305,7 +306,6 @@ spec:
         labels:
           aadpodidbinding: tekton-bot
         max_concurrency: 0
-        merge_method: ""
         name: pr-build
         optional: false
         pipeline_run_spec:
@@ -355,7 +355,7 @@ spec:
               name: REPO_URL
               type: string
             tasks:
-            - name: from-build-pack
+            - name: meta-pipeline
               params:
               - name: BUILD_ID
                 value: $(params.BUILD_ID)
@@ -554,40 +554,41 @@ spec:
                       path: labels
                   name: podinfo
           serviceAccountName: tekton-bot
-
-        queries:
-          - excludedBranches: { }
-            included_branches: { }
-            labels:
-              entries:
-                - approved
-            milestone: ""
-            missingLabels:
-              entries:
-                - do-not-merge
-                - do-not-merge/hold
-                - do-not-merge/work-in-progress
-                - needs-ok-to-test
-                - needs-rebase
-            review_approved_required: false
-          - excludedBranches: { }
-            included_branches: { }
-            labels:
-              entries:
-                - updatebot
-            milestone: ""
-            missingLabels:
-              entries:
-                - do-not-merge
-                - do-not-merge/hold
-                - do-not-merge/work-in-progress
-                - needs-ok-to-test
-                - needs-rebase
-            review_approved_required: false
         report: true
         rerun_command: /test this
         run_if_changed: ""
         trigger: (?m)^/test( all| this),?(\s+|$)
+
+  merge_method: ""
+  queries:
+    - excludedBranches: { }
+      included_branches: { }
+      labels:
+        entries:
+          - approved
+      milestone: ""
+      missingLabels:
+        entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      review_approved_required: false
+    - excludedBranches: { }
+      included_branches: { }
+      labels:
+        entries:
+          - updatebot
+      milestone: ""
+      missingLabels:
+        entries:
+          - do-not-merge
+          - do-not-merge/hold
+          - do-not-merge/work-in-progress
+          - needs-ok-to-test
+          - needs-rebase
+      review_approved_required: false
   schedulerAgent:
     agent: tekton
   trigger:
