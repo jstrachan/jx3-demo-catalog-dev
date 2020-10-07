@@ -27,7 +27,6 @@ rules:
       - tekton.dev
     resources:
       - pipelines
-      - pipelinereources
       - pipelineruns
       - tasks
     verbs:
