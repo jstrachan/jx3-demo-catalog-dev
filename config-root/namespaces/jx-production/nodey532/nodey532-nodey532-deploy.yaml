@@ -1,29 +1,29 @@
-# Source: nodey530/templates/deployment.yaml
+# Source: nodey532/templates/deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodey530-nodey530
+  name: nodey532-nodey532
   labels:
     draft: draft-app
-    chart: "nodey530-1.0.11"
+    chart: "nodey532-1.0.14"
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  namespace: jx-staging
+  namespace: jx-production
   annotations:
     wave.pusher.com/update-on-config-change: 'true'
 spec:
   selector:
     matchLabels:
-      app: nodey530-nodey530
+      app: nodey532-nodey532
   replicas: 1
   template:
     metadata:
       labels:
         draft: draft-app
-        app: nodey530-nodey530
+        app: nodey532-nodey532
     spec:
       containers:
-        - name: nodey530
-          image: "gcr.io/jenkins-x-labs-bdd/nodey530:1.0.11"
+        - name: nodey532
+          image: "gcr.io/jenkins-x-labs-bdd/nodey532:1.0.14"
           imagePullPolicy: IfNotPresent
           env:
           envFrom: null

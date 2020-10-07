@@ -1,15 +1,15 @@
-# Source: nodey530/templates/service.yaml
+# Source: nodey532/templates/service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: nodey530
+  name: nodey532
   labels:
-    chart: "nodey530-1.0.11"
+    chart: "nodey532-1.0.14"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     fabric8.io/expose: "true"
     fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
-  namespace: jx-staging
+  namespace: jx-production
 spec:
   type: ClusterIP
   ports:
@@ -18,4 +18,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: nodey530-nodey530
+    app: nodey532-nodey532

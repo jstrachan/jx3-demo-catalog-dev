@@ -1,0 +1,67 @@
+# Source: nodey532/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-07T10:36:29Z"
+  deletionTimestamp: null
+  name: 'nodey532-1.0.14'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.14
+      sha: 4674fcdc75906d966f461faab1a882c648e2c15a
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.14
+      sha: 0b6f1fb42cb8c70a532fe474abb39433905ec2e4
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: 20d096ec6c83e699443067d0c17ab0c4c741eed5
+  gitCloneUrl: https://github.com/jstrachan/nodey532.git
+  gitHttpUrl: https://github.com/jstrachan/nodey532
+  gitOwner: jstrachan
+  gitRepository: nodey532
+  name: 'nodey532'
+  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.14
+  version: v1.0.14
+status: {}
