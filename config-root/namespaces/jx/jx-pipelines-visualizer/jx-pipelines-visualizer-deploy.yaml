@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: jx-pipelines-visualizer
-          image: "gcr.io/jenkinsxio/jx-pipelines-visualizer:0.0.10"
+          image: "gcr.io/jenkinsxio/jx-pipelines-visualizer:0.0.0-SNAPSHOT-PR-1-2"
           args:
             - -namespace
             - jx
