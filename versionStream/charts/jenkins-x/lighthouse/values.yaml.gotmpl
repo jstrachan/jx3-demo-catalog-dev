@@ -7,6 +7,7 @@ hmacToken: "{{ .Values.secrets.hmacToken | default "123abc" }}"
 
 tektoncontroller:
   dashboardURL: "http://dashboard{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}"
+  dashboardTemplate: "namespaces/{{"{{"}} .Namespace {{"}}"}}/pipelineruns/{{"{{"}} .PipelineRun {{"}}"}}"
 
 git:
   kind: {{ .Values.jxRequirements.cluster.gitKind | default "github" }}
@@ -23,8 +24,8 @@ env:
 
 image:
   repository: gcr.io/jenkinsxio/lighthouse
-  # TODO remove when this PR merges: https://github.com/jenkins-x/lighthouse/pull/1104
-  tag: 0.0.0-SNAPSHOT-PR-1104-3
+  # TODO remove when this PR merges: https://github.com/jenkins-x/lighthouse/pull/1106
+  tag: 0.0.0-SNAPSHOT-PR-1106-10
 
 vault:
 {{- if eq .Values.jxRequirements.secretStorage "vault" }}
