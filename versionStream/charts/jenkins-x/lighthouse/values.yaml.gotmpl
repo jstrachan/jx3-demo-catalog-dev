@@ -5,6 +5,9 @@ engines:
 
 hmacToken: "{{ .Values.secrets.hmacToken | default "123abc" }}"
 
+tektoncontroller:
+  dashboardURL: http://dashboard{{ .Requirements.ingress.namespaceSubDomain }}{{ .Requirements.ingress.domain }}
+
 git:
   kind: {{ .Values.jxRequirements.cluster.gitKind | default "github" }}
   name: {{ .Values.jxRequirements.cluster.gitName | default "github" }}
