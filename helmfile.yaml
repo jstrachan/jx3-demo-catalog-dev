@@ -88,7 +88,7 @@ releases:
   name: demo301
   namespace: jx-staging
 - chart: dev/nodey532
-  version: 1.0.16
+  version: 1.0.17
   name: nodey532
   namespace: jx-staging
 templates: {}
