@@ -32,7 +32,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - --namespace=jx
-            - --dashboard-url=
+            - --dashboard-url=http://dashboard-jx.34.66.77.190.nip.io
           ports:
             - name: metrics
               containerPort: 8080
