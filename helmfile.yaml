@@ -87,5 +87,9 @@ releases:
   version: 1.0.18
   name: nodey532
   namespace: jx-staging
+- chart: dev/nodey532
+  version: 1.0.19
+  name: nodey532
+  namespace: jx-production
 templates: {}
 missingFileHandler: ""
