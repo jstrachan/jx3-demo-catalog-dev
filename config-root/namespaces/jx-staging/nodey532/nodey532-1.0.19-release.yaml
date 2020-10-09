@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-09T08:21:00Z"
+  creationTimestamp: "2020-10-09T08:31:32Z"
   deletionTimestamp: null
-  name: 'nodey532-1.0.18'
+  name: 'nodey532-1.0.19'
   namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -12,7 +12,8 @@ spec:
   commits:
     - author:
         accountReference:
-          - provider: jenkins.io/git-github-userid
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
         email: jenkins-x@googlegroups.com
         name: jstrachan
       branch: master
@@ -23,8 +24,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.18
-      sha: c5cbcd5a95c4bdd66c88ff81ac419a8854a33bce
+        release 1.0.19
+      sha: 3a3e55abb42aa6aa8cb65632003d04b7f34a9825
     - author:
         accountReference:
           - id: jstrachan-0
@@ -39,21 +40,8 @@ spec:
         email: jenkins-x@googlegroups.com
         name: jstrachan
       message: |
-        release 1.0.18
-      sha: 890b9ed084185a4cc02ca6530b122acfa2ee4b43
-    - author:
-        accountReference:
-          - provider: jenkins.io/git-github-userid
-        email: james.strachan@gmail.com
-        name: James Strachan
-      branch: master
-      committer:
-        accountReference:
-          - provider: jenkins.io/git-github-userid
-        email: noreply@github.com
-        name: GitHub
-      message: Update index.html
-      sha: 087cd6a42790eeb21b9f8a780b283f4ea9ad2291
+        release 1.0.19
+      sha: daae88064d34a856ee69b9ba32050e087335ed5b
     - author:
         accountReference:
           - id: james-strachan-0
@@ -68,27 +56,12 @@ spec:
         email: noreply@github.com
         name: GitHub
       message: Update index.html
-      sha: f7c5c93e96397be2cfd1a8a7123a72eacbeaaf69
-    - author:
-        accountReference:
-          - id: james-strachan-0
-            provider: jenkins.io/git-github-userid
-        email: james.strachan@gmail.com
-        name: James Strachan
-      branch: master
-      committer:
-        accountReference:
-          - id: github-0
-            provider: jenkins.io/git-github-userid
-        email: noreply@github.com
-        name: GitHub
-      message: Update index.html
-      sha: f3b69380a770d5d851b5faa140392e570c713833
+      sha: 4c0ee360cc045fa6825aadbe563bf4e596f901e2
   gitCloneUrl: https://github.com/jstrachan/nodey532.git
   gitHttpUrl: https://github.com/jstrachan/nodey532
   gitOwner: jstrachan
   gitRepository: nodey532
   name: 'nodey532'
-  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.18
-  version: v1.0.18
+  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.19
+  version: v1.0.19
 status: {}
