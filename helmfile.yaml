@@ -17,8 +17,6 @@ repositories:
   url: https://kubernetes-charts.storage.googleapis.com
 - name: cdf
   url: https://cdfoundation.github.io/tekton-helm-chart
-- name: dev
-  url: http://chartmuseum-jx.34.66.77.190.nip.io/
 releases:
 - chart: jenkins-x/jxboot-helmfile-resources
   version: 1.0.5
@@ -83,13 +81,5 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
-- chart: dev/demo301
-  version: 0.0.1
-  name: demo301
-  namespace: jx-staging
-- chart: dev/nodey532
-  version: 1.0.17
-  name: nodey532
-  namespace: jx-staging
 templates: {}
 missingFileHandler: ""
