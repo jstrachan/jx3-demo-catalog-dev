@@ -13,6 +13,3 @@ ingress:
   hosts:
   - "dashboard{{ .Values.jxRequirements.ingress.namespaceSubDomain | default "." }}{{ .Values.jxRequirements.ingress.domain }}"
 
-image:
-  # TODO until this PR merges: https://github.com/jenkins-x/jx-pipelines-visualizer/pull/8
-  tag: "0.0.0-SNAPSHOT-PR-8-1"
