@@ -2,9 +2,9 @@
 apiVersion: jenkins.io/v1
 kind: Release
 metadata:
-  creationTimestamp: "2020-10-07T13:15:53Z"
+  creationTimestamp: "2020-10-10T06:20:45Z"
   deletionTimestamp: null
-  name: 'jx-pipelines-visualizer-0.0.10'
+  name: 'jx-pipelines-visualizer-0.0.38'
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
@@ -14,5 +14,5 @@ spec:
   gitOwner: jenkins-x
   gitRepository: jx-pipelines-visualizer
   name: 'jx-pipelines-visualizer'
-  version: 0.0.10
+  version: 0.0.38
 status: {}
