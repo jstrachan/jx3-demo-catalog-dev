@@ -21,7 +21,7 @@ controllerrole:
 controllerbuild:
   image:
     repository: gcr.io/jenkinsxio/jx-build-controller
-    tag: 0.0.2
+    tag: 0.0.6
 
   serviceaccount:
     dummy: value
@@ -32,6 +32,10 @@ controllerbuild:
 {{- end }}
 
 {{- if eq .Values.jxRequirements.cluster.provider "eks" }}
+podTemplates:
+  agent:
+    dockerConfig: true
+{{- else if eq .Values.jxRequirements.cluster.provider "aks" }}
 podTemplates:
   agent:
     dockerConfig: true
@@ -50,6 +54,20 @@ secrets:
   dockerConfig: |-
     {
       "credsStore": "ecr-login"
+    }
+  {{- end }}
+{{- else if eq .Values.jxRequirements.cluster.provider "aks" }}
+  {{- if .Values.jxRequirements.cluster.registry }}
+  dockerConfig: |-
+    {
+      "credHelpers": {
+        "{{ .Values.jxRequirements.cluster.registry }}": "acr-env"
+      }
+    }
+  {{- else }}
+  dockerConfig: |-
+    {
+      "credsStore": "acr"
     }
   {{- end }}
 {{- end }}
