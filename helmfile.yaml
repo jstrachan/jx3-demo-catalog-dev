@@ -82,5 +82,9 @@ releases:
   namespace: jx
   values:
   - versionStream/charts/jx3/jx-pipelines-visualizer/values.yaml.gotmpl
+- chart: dev/nodey532
+  version: 1.0.22
+  name: nodey532
+  namespace: jx-production
 templates: {}
 missingFileHandler: ""
