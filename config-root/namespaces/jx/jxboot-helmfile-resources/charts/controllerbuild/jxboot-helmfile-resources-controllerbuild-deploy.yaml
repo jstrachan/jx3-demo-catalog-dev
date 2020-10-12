@@ -27,7 +27,14 @@ spec:
       serviceAccountName: jenkins-x-controllerbuild
       containers:
         - name: controllerbuild
-          command: [jx-build-controller]
+          command: [jx]
+          args:
+            - controller
+            - build
+            - --batch-mode
+            - --git-credentials
+            - --git-reporting
+            - --verbose
           imagePullPolicy: IfNotPresent
           image: "gcr.io/jenkinsxio/jx-build-controller:0.0.6"
           ports:

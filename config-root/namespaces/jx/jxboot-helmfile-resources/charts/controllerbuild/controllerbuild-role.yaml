@@ -11,6 +11,7 @@ rules:
       - jenkins.io
     resources:
       - pipelineactivities
+      - pipelinestructures
       - sourcerepositories
     verbs:
       - list
