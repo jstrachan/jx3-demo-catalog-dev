@@ -1,0 +1,67 @@
+# Source: nodey532/templates/release.yaml
+apiVersion: jenkins.io/v1
+kind: Release
+metadata:
+  creationTimestamp: "2020-10-12T10:39:31Z"
+  deletionTimestamp: null
+  name: 'nodey532-1.0.21'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  commits:
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.21
+      sha: 8758f260718ed05a68a6ef06f492ca33c65ce96b
+    - author:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      branch: master
+      committer:
+        accountReference:
+          - id: jstrachan-0
+            provider: jenkins.io/git-github-userid
+        email: jenkins-x@googlegroups.com
+        name: jstrachan
+      message: |
+        release 1.0.21
+      sha: 54bf80ff98466c78d0bdb718795256e0ed5f1263
+    - author:
+        accountReference:
+          - id: james-strachan-0
+            provider: jenkins.io/git-github-userid
+        email: james.strachan@gmail.com
+        name: James Strachan
+      branch: master
+      committer:
+        accountReference:
+          - id: github-0
+            provider: jenkins.io/git-github-userid
+        email: noreply@github.com
+        name: GitHub
+      message: Update index.html
+      sha: ca1803b76f0b12585109548e8b76bf32aabd83c7
+  gitCloneUrl: https://github.com/jstrachan/nodey532.git
+  gitHttpUrl: https://github.com/jstrachan/nodey532
+  gitOwner: jstrachan
+  gitRepository: nodey532
+  name: 'nodey532'
+  releaseNotesURL: https://github.com/jstrachan/nodey532/releases/tag/v1.0.21
+  version: v1.0.21
+status: {}
