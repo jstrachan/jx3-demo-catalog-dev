@@ -30,6 +30,10 @@ data:
       repos:
       - jstrachan/nodey532
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - jstrachan/phpdemo15
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -157,6 +161,22 @@ data:
       - cat
       - dog
       - pony
+      jstrachan/phpdemo15:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
     requiresig: {}
     sigmention: {}
     size:
@@ -187,6 +207,9 @@ data:
     - repos:
       - jstrachan/nodey532
       trusted_org: todo
+    - repos:
+      - jstrachan/phpdemo15
+      trusted_org: jstrachan
     welcome:
     - message_template: Welcome
 kind: ConfigMap
