@@ -1,0 +1,55 @@
+# Source: nodey532/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodey532-nodey532
+  labels:
+    draft: draft-app
+    chart: "nodey532-1.0.22"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: jx-staging
+  annotations:
+    wave.pusher.com/update-on-config-change: 'true'
+spec:
+  selector:
+    matchLabels:
+      app: nodey532-nodey532
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: nodey532-nodey532
+    spec:
+      containers:
+        - name: nodey532
+          image: "gcr.io/jenkins-x-labs-bdd/nodey532:1.0.22"
+          imagePullPolicy: IfNotPresent
+          env:
+          envFrom: null
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
